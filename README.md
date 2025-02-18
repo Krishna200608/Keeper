@@ -36,7 +36,11 @@ npm start
 - 🔗 Backend integration for 💾 persistence
 
 ## 📸 Usage Examples
-🖼️ Provide screenshots or 💻 snippets demonstrating how to use the app.
+🖼️ screenshots or 💻 snippets demonstrating how to use the app.
+![Site](/videos/1.png)
+![Adding Notes](/videos/2.png)
+![Added Notes](/videos/3.png)
+
 
 ## 🤝 Contribution Guidelines
 We welcome contributions! Follow these steps:
