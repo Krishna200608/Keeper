@@ -45,9 +45,9 @@ npm start
 
 ## 📸 Usage Examples
 🖼️ screenshots or 💻 snippets demonstrating how to use the app.
-![Site](/videos/1.png)
-![Adding Notes](/videos/2.png)
-![Added Notes](/videos/3.png)
+![Site](/Screenshots/1.png)
+![Adding Notes](/Screenshots/2.png)
+![Added Notes](/Screenshots/3.png)
 
 
 ## 🤝 Contribution Guidelines
