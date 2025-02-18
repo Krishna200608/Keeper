@@ -2,6 +2,14 @@
 
 Keeper is a simple ⚛️ frontend app built with ⚡ that functions similarly to 🗂️ Keep, allowing users to ✍️ and 💾 notes efficiently.
 
+I'm excited to share my personal project with you. Check out my website here:
+
+👉 **Visit Keeper:** [https://krishna200608.github.io/Keeper/](https://krishna200608.github.io/Keeper/) 🌐
+
+Feel free to explore, and let your curiosity lead the way! 🚀
+
+---
+
 ## 🛠️ Technologies
 - ⚛️ React
 - ⚡ Vite
