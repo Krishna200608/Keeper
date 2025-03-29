@@ -1,71 +1,71 @@
-import React, { useState } from "react";
-import AddIcon from '@mui/icons-material/Add';
-import Fab from '@mui/material/Fab';
-import Zoom from '@mui/material/Zoom';
+import React, { useState, useEffect } from "react";
+import AddIcon from "@mui/icons-material/Add";
+import Fab from "@mui/material/Fab";
+import Zoom from "@mui/material/Zoom";
 
-function CreateArea(props) {
-  const [input, setInput] = useState({
-    title: "",
-    content: "",
-  });
-
+const CreateArea = ({ addNote, updateNote, noteToEdit, cancelEdit }) => {
+  const [input, setInput] = useState({ title: "", content: "" });
   const [isExpanded, setIsExpanded] = useState(false);
 
-  function handleChange(event) {
-    const { value, name } = event.target;
-    setInput((prevValue) => {
-      return {
-        ...prevValue,
-        [name]: value,
-      };
-    });
-  }
-
-  function submitNote(event) {
-    if (input.title !== "" && input.content !== "") {
-      props.note(input);
-      setInput({ title: "", content: "" });
-    } else if (input.title !== "" || input.content === "") {
-      setInput((prevValue) => {
-        return { ...prevValue };
-      });
+  // When a note is selected for editing, pre-fill the form.
+  useEffect(() => {
+    if (noteToEdit) {
+      setInput({ title: noteToEdit.title, content: noteToEdit.content });
+      setIsExpanded(true);
     }
+  }, [noteToEdit]);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setInput((prevInput) => ({
+      ...prevInput,
+      [name]: value,
+    }));
+  };
+
+  const submitNote = (event) => {
     event.preventDefault();
-  }
-
-  function expand(){
-    setIsExpanded(true);
-  }
-
+    if (input.title.trim() && input.content.trim()) {
+      if (noteToEdit) {
+        // In edit mode, update the note.
+        updateNote(noteToEdit.id, input);
+        // Exit edit mode.
+        if (cancelEdit) cancelEdit();
+      } else {
+        // In add mode, create a new note.
+        addNote(input);
+      }
+      setInput({ title: "", content: "" });
+    }
+  };
 
   return (
     <div>
       <form className="create-note">
-
-      {isExpanded && <input
-            onChange={handleChange}
+        {isExpanded && (
+          <input
             name="title"
             placeholder="Title"
             value={input.title}
-          />}
-
+            onChange={handleChange}
+          />
+        )}
         <textarea
-          onClick={expand}
-          onChange={handleChange}
           name="content"
           placeholder="Take a note..."
-          rows = {isExpanded ? 3 : 1}
+          rows={isExpanded ? 3 : 1}
           value={input.content}
+          onChange={handleChange}
+          onClick={() => setIsExpanded(true)}
         />
-
         <Zoom in={isExpanded}>
           <Fab onClick={submitNote}>
-          <AddIcon />
+            <AddIcon />
           </Fab>
         </Zoom>
       </form>
     </div>
   );
-}
+};
 
 export default CreateArea;

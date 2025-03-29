@@ -1,55 +1,19 @@
-import React, { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Note from "./components/Note"
-import notes from "./assets/notesdata";
-import CreateArea from "./components/CreateArea";
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import {ToastContainer} from 'react-toastify'
+import Home from './pages/Home'
 
-function App() {
-
-  const [caughtNote, setCaughtNote] = useState([])
-
-  function catchNote(newNote){
-    setCaughtNote((prevNotes)=>{
-      return [...prevNotes, newNote];
-    });
-  }
-
-  function deleteNote(id){
-    setCaughtNote((prevNotes)=>{
-      return prevNotes.filter((value, idx)=>{
-          return idx !== id;
-        });
-    });
-  }
-
-
+const App = () => {
   return (
     <div>
-      <Header />
-      <CreateArea note = {catchNote} />
-      
-      {/* {notes.map(note => (
-        <Note 
-          key = {note.key}
-          title = {note.title}
-          content = {note.content}
-        />
-      ))} */}
-
-      {caughtNote.map((note, idx) => (
-        <Note
-          key = {idx}
-          id = {idx}
-          title = {note.title}
-          content = {note.content}
-
-          deleteNote = {deleteNote}
-           />
-      ))}
-      <Footer />
+      <div>
+      <ToastContainer/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
+    </div>
     </div>
   )
 }
 
-export default App;
+export default App

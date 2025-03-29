@@ -1,3 +1,4 @@
+@import "tailwindcss";
 * {
   padding: 0;
   margin: 0;
@@ -117,3 +118,27 @@ form.create-note button {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 } */
+
+/* styles.css */
+.custom-button {
+  background-color: #fff; /* Green background */
+  border: none;              /* Remove borders */
+  color: black;              /* White text */
+  padding: 15px 32px;        /* Some padding */
+  text-align: center;        /* Centered text */
+  text-decoration: none;     /* Remove underline */
+  display: inline-block;     /* Get it to line up properly */
+  font-size: 18px;           /* Increase font size */
+  margin: 4px 2px;           /* Add some margin */
+  cursor: pointer;           /* Pointer/hand icon */
+  border-radius: 8px;        /* Rounded corners */
+  transition-duration: 0.1s; /* Transition effect */
+  position: absolute;
+  bottom: 3rem;
+  left: 45rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.custom-button:hover {
+  background-color: gray; /* Darker green on hover */
+}
