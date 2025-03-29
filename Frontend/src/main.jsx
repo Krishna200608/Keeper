@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import { NotesContextProvider } from "./context/NotesContext.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/Keeper">
+  <BrowserRouter>
     <NotesContextProvider>
       <App />
     </NotesContextProvider>
