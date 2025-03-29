@@ -166,5 +166,3 @@ Distributed under the IIITA License.
 - [Vercel](https://vercel.com/docs)
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
-**Demo Image placeholders provided by [Placeholder.com](https://via.placeholder.com/).**
-
