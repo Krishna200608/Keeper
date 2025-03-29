@@ -49,7 +49,7 @@ Follow these steps to set up the project locally:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/keeper.git
+   git clone https://github.com/Krishna200608/Keeper.git
    ```
 
 2. **Install dependencies for both frontend and backend:**
