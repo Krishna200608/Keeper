@@ -1,12 +1,12 @@
 # Canvas Keeper (Note Taking App) ✨📝🚀
 
-Canvas Keeper is a full-stack note taking application that leverages modern web technologies. The frontend is built with React, and the backend is powered by Node.js and Express. The project is hosted on Vercel and uses MongoDB Atlas for data storage. 🌍💡🔧
+Canvas Keeper is a full-stack note-taking application that leverages modern web technologies. The frontend is built with React, and the backend is powered by Node.js and Express. The project is hosted on Vercel and uses MongoDB Atlas for data storage. 🌍💡🛠
 
-[Live Demo](https://keeper-frontend-mocha.vercel.app/) 🎯🔗✨
+[Live Demo](#) 🎯🔗🌟
 
 ---
 
-## Table of Contents 📜📌📚
+## Table of Contents 🌜📌📚
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -27,9 +27,13 @@ Canvas Keeper is a full-stack note taking application that leverages modern web 
 - **Responsive Design:** Works well on desktop and mobile devices.
 - **User-Friendly Interface:** Clean and intuitive UI for a smooth user experience.
 
+<!-- Demo images - Replace these URLs with your actual images when ready -->
+![Demo Image 1](./Screenshots/1.png)
+![Demo Image 2](./Screenshots/2.png)
+
 ---
 
-## Tech Stack 🏗️💻🌐
+## Tech Stack 🏧💻🌐
 
 - **Frontend:** [React](https://reactjs.org/)
 - **Backend:** [Node.js](https://nodejs.org/) and [Express](https://expressjs.com/)
@@ -38,7 +42,7 @@ Canvas Keeper is a full-stack note taking application that leverages modern web 
 
 ---
 
-## Installation 🛠️📥🔽
+## Installation 🛠️📅🔽
 
 Follow these steps to set up the project locally:
 
@@ -70,7 +74,7 @@ Follow these steps to set up the project locally:
 
 Before running the application, create a `.env` file in both the frontend and backend directories.
 
-### Frontend 🏗️🖥️🔗
+### Frontend 🏧🖥️🔗
 
 Create a `.env` file in the `frontend` folder with the following content:
 
@@ -80,7 +84,7 @@ VITE_BACKEND_URL='http://your-backend-url'
 
 *Replace `http://your-backend-url` with the actual backend URL when deploying or testing locally.*
 
-### Backend 🗄️🔧📡
+### Backend 📺🛠️📱
 
 Create a `.env` file in the `backend` folder with the following content:
 
@@ -93,9 +97,9 @@ PORT=your_port
 
 ---
 
-## Running the Project 🚀⚙️💡
+## Running the Project 🚀️⚙️💡
 
-### Frontend 🏗️📲💻
+### Frontend 🏧📲💻
 
 After setting up the environment variables, start the React development server:
 
@@ -104,7 +108,7 @@ cd frontend
 npm start
 ```
 
-### Backend 🛠️🗄️🚀
+### Backend 🛠️📺🚀
 
 Start the Express server:
 
@@ -113,11 +117,11 @@ cd backend
 npm run server
 ```
 
-The frontend will connect to the backend using the URL specified in the `VITE_BACKEND_URL` variable. 🌐🔗⚡
+The frontend will connect to the backend using the URL specified in the `VITE_BACKEND_URL` variable. 🌐🔗⚡️
 
 ---
 
-## Deployment 🚀📡🌍
+## Deployment 🚀📱🌍
 
 - **Frontend:** The project is hosted on Vercel.
 - **Backend:** For deploying the backend, consider platforms like Heroku, Render, or deploying as serverless functions on Vercel if supported.
@@ -126,7 +130,7 @@ For more details on Vercel deployment, refer to the [Vercel Documentation](https
 
 ---
 
-## Contributing 🤝✨🛠️
+## Contributing 🤝🌟🛠️
 
 Contributions are welcome! Please follow these steps:
 
@@ -149,7 +153,7 @@ Ensure that your code follows the project style guidelines and that all tests pa
 
 ---
 
-## License 📜🔒📝
+## License 📝🔒📚
 
 Distributed under the IIITA License.
 
@@ -161,4 +165,6 @@ Distributed under the IIITA License.
 - [Express](https://expressjs.com/)
 - [Vercel](https://vercel.com/docs)
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+
+**Demo Image placeholders provided by [Placeholder.com](https://via.placeholder.com/).**
 
