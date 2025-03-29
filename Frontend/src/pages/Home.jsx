@@ -16,7 +16,6 @@ const Home = () => {
   useEffect(() => {
     setNotes(fetchedNotes);
   }, [fetchedNotes]);
-  
 
   // Add a new note.
   const addNote = (newNote) => {
@@ -52,29 +51,38 @@ const Home = () => {
 
   const saveNotes = async () => {
     try {
-      const response = await axios.post(`${backendUrl}/api/notes/replace-notes`, {notes});
-  
+      const response = await axios.post(
+        `${backendUrl}/api/notes/replace-notes`,
+        { notes }
+      );
+
       if (response.data.success) {
-        toast.success('Notes saved successfully.');
+        toast.success("Notes saved successfully.");
       } else {
-        toast.error('Failed to save notes.');
+        toast.error("Failed to save notes.");
       }
     } catch (error) {
-      console.error('Error saving notes:', error);
-      toast.error('An error occurred while saving notes.');
+      console.error("Error saving notes:", error);
+      toast.error("An error occurred while saving notes.");
     }
-  }
-  
+  };
 
   return (
     <div>
       <Header />
-      <CreateArea
-        addNote={addNote}
-        updateNote={updateNote}
-        noteToEdit={noteToEdit}
-        cancelEdit={cancelEdit}
-      />
+      <div className="createArea-div">
+        <CreateArea
+          addNote={addNote}
+          updateNote={updateNote}
+          noteToEdit={noteToEdit}
+          cancelEdit={cancelEdit}
+        />
+        <div className="custom-button-div">
+          <button onClick={saveNotes} className="custom-button">
+            Save Notes
+          </button>
+        </div>
+      </div>
       {notes &&
         notes.map((note, index) => (
           <Note
@@ -86,10 +94,6 @@ const Home = () => {
             editNote={editNote}
           />
         ))}
-
-      <div className="custom-button-div">
-        <button onClick={saveNotes} className="custom-button">Save Notes</button>
-      </div>
 
       <Footer />
     </div>

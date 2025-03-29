@@ -132,7 +132,6 @@ form.create-note button {
   cursor: pointer;           /* Pointer/hand icon */
   border-radius: 8px;        /* Rounded corners */
   transition-duration: 0.1s; /* Transition effect */
-  position: absolute;
   bottom: 3rem;
   left: 45rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -140,4 +139,11 @@ form.create-note button {
 
 .custom-button:hover {
   background-color: gray; /* Darker green on hover */
+}
+
+.createArea-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20%;
 }
